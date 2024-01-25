@@ -2548,7 +2548,6 @@ export interface components {
         | 'REALTIME_MESSAGE_COUNT'
         | 'REALTIME_PEAK_CONNECTIONS'
         | 'COMPUTE_HOURS_BRANCH'
-        | 'COMPUTE_HOURS_XXS'
         | 'COMPUTE_HOURS_XS'
         | 'COMPUTE_HOURS_SM'
         | 'COMPUTE_HOURS_MD'
@@ -2848,7 +2847,6 @@ export interface components {
         | 'REALTIME_MESSAGE_COUNT'
         | 'REALTIME_PEAK_CONNECTIONS'
         | 'COMPUTE_HOURS_BRANCH'
-        | 'COMPUTE_HOURS_XXS'
         | 'COMPUTE_HOURS_XS'
         | 'COMPUTE_HOURS_SM'
         | 'COMPUTE_HOURS_MD'
@@ -2898,7 +2896,6 @@ export interface components {
       billing_partner: 'fly'
       scheduled_plan_change: components['schemas']['ScheduledPlanChange'] | null
       customer_balance: number
-      nano_enabled: boolean
     }
     UpdateSubscriptionBody: {
       payment_method?: string
@@ -6086,7 +6083,6 @@ export interface operations {
           | 'REALTIME_MESSAGE_COUNT'
           | 'REALTIME_PEAK_CONNECTIONS'
           | 'COMPUTE_HOURS_BRANCH'
-          | 'COMPUTE_HOURS_XXS'
           | 'COMPUTE_HOURS_XS'
           | 'COMPUTE_HOURS_SM'
           | 'COMPUTE_HOURS_MD'

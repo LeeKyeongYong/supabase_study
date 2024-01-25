@@ -37,7 +37,6 @@ const Compute = ({ orgSlug, projectRef, startDate, endDate }: ComputeProps) => {
 
   const COMPUTE_TO_COLOR: Record<ComputeUsageMetric, AttributeColor> = {
     [ComputeUsageMetric.COMPUTE_HOURS_BRANCH]: 'blue',
-    [ComputeUsageMetric.COMPUTE_HOURS_XXS]: 'white',
     [ComputeUsageMetric.COMPUTE_HOURS_XS]: 'gray',
     [ComputeUsageMetric.COMPUTE_HOURS_SM]: 'green',
     [ComputeUsageMetric.COMPUTE_HOURS_MD]: 'dark-green',
