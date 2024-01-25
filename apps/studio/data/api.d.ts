@@ -2896,6 +2896,7 @@ export interface components {
       billing_partner: 'fly'
       scheduled_plan_change: components['schemas']['ScheduledPlanChange'] | null
       customer_balance: number
+      nano_enabled: boolean
     }
     UpdateSubscriptionBody: {
       payment_method?: string
