@@ -385,7 +385,7 @@ const ComputeInstanceSidePanel = () => {
                   <IconAlertTriangle className="h-4 w-4" />
                   <AlertDescription_Shadcn_>
                     You have a scheduled subscription change that will be canceled if you change
-                    your Optimized Compute add on.
+                    your compute size.
                   </AlertDescription_Shadcn_>
                 </Alert_Shadcn_>
               )}

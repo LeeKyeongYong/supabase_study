@@ -14,6 +14,7 @@ import {
   IconAlertTriangle,
   IconChevronRight,
   IconExternalLink,
+  IconInfo,
 } from 'ui'
 
 import {
@@ -181,11 +182,23 @@ const Addons = () => {
 
       {isSuccess && (
         <>
+          {selectedProject?.infra_compute_size === 'nano' && subscription?.plan.id !== 'free' && (
+            <ScaffoldContainer className="mt-4">
+              <Alert_Shadcn_ variant="default">
+                <IconInfo strokeWidth={2} />
+                <AlertTitle_Shadcn_>Free upgrade to Micro</AlertTitle_Shadcn_>
+                <AlertDescription_Shadcn_>
+                  Your project is still on the Nano compute. Paid plans allows you to upgrade to
+                  Micro compute for free.
+                </AlertDescription_Shadcn_>
+              </Alert_Shadcn_>
+            </ScaffoldContainer>
+          )}
           <ScaffoldContainer>
             <ScaffoldSection>
               <ScaffoldSectionDetail>
                 <div className="space-y-6">
-                  <p className="m-0">Optimized compute</p>
+                  <p className="m-0">Compute Size</p>
                   <div className="space-y-2">
                     <p className="text-sm text-foreground-light m-0">More information</p>
                     <div>
@@ -220,15 +233,15 @@ const Addons = () => {
                   <div>
                     <div className="rounded-md bg-surface-100 border border-muted w-[160px] h-[96px] overflow-hidden">
                       <Image
-                        alt="Optimized Compute"
+                        alt="Compute size"
                         width={160}
                         height={96}
                         src={
-                          computeInstance !== undefined
-                            ? `${BASE_PATH}/img/optimized-compute-on${
+                          ['nano', 'micro'].includes(selectedProject?.infra_compute_size || 'micro')
+                            ? `${BASE_PATH}/img/optimized-compute-off${
                                 resolvedTheme?.includes('dark') ? '' : '--light'
                               }.svg`
-                            : `${BASE_PATH}/img/optimized-compute-off${
+                            : `${BASE_PATH}/img/optimized-compute-on${
                                 resolvedTheme?.includes('dark') ? '' : '--light'
                               }.svg`
                         }
